@@ -1,27 +1,37 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Powerlevel10k
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/(username)/.oh-my-zsh"
+export ZSH="/Users/brian/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+
+# Enabling this will only render the current directory I'm working on
+# POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
 # Command Line Left-side Prompter
 
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda dir dir_writable  vcs) # <= left promt set "dir"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda virtualenv dir dir_writable vcs) # <= left promt set "dir"
 
 # Command Line Right-side Prompter 
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time virtualenv time) # <= right prompt set "time"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time) # <= right prompt set "time"
 
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -42,7 +52,10 @@ alias chrome="open -a Google\ Chrome"
 alias ql="qlmanage -p"
 
 # For folder aliases
-# add your folder aliases here
+alias gontu="cd ~/Cloud/OneDrive\ -\ 國立台灣大學"
+alias DSAP="gontu && cd Courses/2019\ SEM\ 2/IM\ 1010/ && code ."
+# alias pdogs="vscode ~/Cloud/OneDrive\ -\ 國立台灣大學/Project_Courses/2019\ SEM1/IM\ 1003/PDOGS/PDOGS.code-workspace | open https://pdogs.ntu.im"
+# alias game="cd ~/Documents/Resources/Games/Focus/Focus/A\ Cnake"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -165,3 +178,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
