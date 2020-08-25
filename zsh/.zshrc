@@ -20,6 +20,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+
+# COLORS
+# tried: turquoise2, palegreen1, 122, 194
+POWERLEVEL9K_VIRTUALENV_BACKGROUND="clear"
+POWERLEVEL9K_VIRTUALENV_FOREGROUND="152"
+POWERLEVEL9K_ANACONDA_BACKGROUND="clear"
+POWERLEVEL9K_ANACONDA_FOREGROUND="152"
+# POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 
 # Enabling this will only render the current directory I'm working on
 # POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
@@ -31,7 +40,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda virtualenv dir dir_writable vcs) # <
 
 # Command Line Right-side Prompter 
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time) # <= right prompt set "time"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time ram) # <= right prompt set "time"
 
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -52,8 +61,11 @@ alias chrome="open -a Google\ Chrome"
 alias ql="qlmanage -p"
 
 # For folder aliases
-alias gontu="cd ~/Cloud/OneDrive\ -\ 國立台灣大學"
-alias DSAP="gontu && cd Courses/2019\ SEM\ 2/IM\ 1010/ && code ."
+alias gontu="cd ~/Cloud/Google\ Drive\ -\ National\ Taiwan\ University"
+
+# For Hexo
+alias hexopush="hexo clean && hexo generate && hexo deploy"
+
 # alias pdogs="vscode ~/Cloud/OneDrive\ -\ 國立台灣大學/Project_Courses/2019\ SEM1/IM\ 1003/PDOGS/PDOGS.code-workspace | open https://pdogs.ntu.im"
 # alias game="cd ~/Documents/Resources/Games/Focus/Focus/A\ Cnake"
 
@@ -108,6 +120,7 @@ plugins=(
   zsh-autosuggestions
   zsh-completions
   virtualenv
+  wakatime
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -178,4 +191,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
+export PATH="/usr/local/sbin:$PATH"
