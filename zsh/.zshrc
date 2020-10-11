@@ -126,7 +126,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-PATH="$HOME/anaconda3/bin:$PATH"
+PATH="$HOME/opt/anaconda3/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -158,34 +158,16 @@ PATH="$HOME/anaconda3/bin:$PATH"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-
-# added by Anaconda3 2018.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
-# . "/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/brian/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/brian/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/brian/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/brian/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/brian/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/brian/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/brian/anaconda3/bin:$PATH"
+        export PATH="/Users/brian/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -193,3 +175,5 @@ unset __conda_setup
 
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/brian/.local/bin:$PATH"
+[ -f "/Users/brian/.ghcup/env" ] && source "/Users/brian/.ghcup/env" # ghcup-env
