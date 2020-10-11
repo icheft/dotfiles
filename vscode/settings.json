@@ -3,23 +3,126 @@
     "window.zoomLevel": 1,
     "C_Cpp.updateChannel": "Insiders",
     "liveshare.featureSet": "insiders",
-    "workbench.colorTheme": "Dracula",
     "terminal.integrated.rendererType": "canvas",
     "workbench.startupEditor": "welcomePage",
     "terminal.integrated.inheritEnv": false,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "[cpp]": {},
-    "picgo.customOutputFormat": "![](${url})",
     "workbench.iconTheme": "material-icon-theme",
-    "markdown-preview-enhanced.printBackground": true,
-    "markdown-preview-enhanced.previewTheme": "vue.css",
     "liquid.format": true,
-    "vscode-imgur.preferUserUpload": true,
     "prettier.tabWidth": 4,
     "clang-format.language.javascript.enable": false,
+    "prettier.disableLanguages": ["cpp", "c++", "markdown"],
     "prettier.singleQuote": true,
-    "prettier.useTabs": true,
-    "editor.formatOnSave": false,
-    "C_Cpp.clang_format_fallbackStyle": "Webkit",
-    "C_Cpp.clang_format_style": "{BasedOnStyle: Webkit, PointerAlignment: Left, BreakBeforeBraces: Linux, AllowShortIfStatementsOnASingleLine: Always, AllowAllConstructorInitializersOnNextLine: true, ConstructorInitializerAllOnOneLineOrOnePerLine: true}",
+    "todo-tree.tree.showScanModeButton": true,
+    "todo-tree.highlights.defaultHighlight": {
+        // https://microsoft.github.io/vscode-codicons/dist/codicon.html
+        "type": "text-and-comment",
+        "foreground": "white",
+        "background": "green",
+        "iconColour": "green",
+        "opacity": 75
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
+            "icon": "check"
+            // "type": "text"
+        },
+        "FIXME": {
+            "foreground": "white",
+            "background": "red",
+            "iconColour": "red",
+            "icon": "$(lightbulb-autofix)"
+        },
+        "BUG": {
+            "foreground": "white",
+            "background": "#db3254",
+            "iconColour": "#db3254",
+            "icon": "bug"
+        },
+        "REVIEW": {
+            "foreground": "white",
+            "background": "cyan",
+            "iconColour": "lightblue",
+            "icon": "eye"
+        },
+        "HACK": {
+            "foreground": "white",
+            "background": "#FFA500",
+            "iconColour": "orange",
+            "icon": "alert"
+        },
+        "REF": {
+            "foreground": "white",
+            "background": "grey",
+            "iconColour": "grey",
+            "icon": "link",
+            "type": "tag"
+        },
+        "QUESTION": {
+            "foreground": "white",
+            "background": "#c94dff",
+            "iconColour": "#c94dff",
+            "icon": "question"
+        }
+    },
+    "todo-tree.general.tags": [
+        "TODO",
+        "QUESTION",
+        "BUG",
+        "FIXME",
+        "REVIEW",
+        "HACK",
+        "REF"
+    ],
+    "files.associations": {
+        "*.cpp": "cpp"
+    },
+    "grammarly.ignore": ["**/node_modules/**/*", "*cpp"],
+    "grammarly.autoActivate": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "polacode.transparentBackground": true,
+    "polacode.shadow": "",
+    "polacode.backgroundColor": "#FFFFFF00",
+    "cSpell.userWords": ["icheft", "pseudocode"],
+    "editor.fontFamily": "'Hack Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "tabnine.experimentalAutoImports": true,
+    "terminal.integrated.scrollback": 6000,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.semanticHighlighting.enabled": true,
+    "python.jediEnabled": false,
+    "C_Cpp.clang_format_fallbackStyle": "WebKit",
+    "C_Cpp.clang_format_style": "{BasedOnStyle: Webkit, PointerAlignment: Left, BreakBeforeBraces: Mozilla, AllowShortIfStatementsOnASingleLine: Always, AllowAllConstructorInitializersOnNextLine: true, ConstructorInitializerAllOnOneLineOrOnePerLine: true, Standard: Auto}",
+    "python.languageServer": "Pylance",
+    "git.autofetch": true,
+    "python.dataScience.askForKernelRestart": false,
+    "python.dataScience.alwaysTrustNotebooks": true,
+    "sqltools.useNodeRuntime": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.colorTheme": "Dracula",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/dist/css"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "css.remoteStyleSheets": [
+        "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    ],
+    "html.format.unformatted": "",
+    "wrap-console-log.format.wrap.prefixString": "$func('Logged Output> $var', $var)",
+    "turboConsoleLog.logMessagePrefix": "Logged Output",
+    "turboConsoleLog.quote": "'",
+    "notebook.kernelProviderAssociations": []
 }
