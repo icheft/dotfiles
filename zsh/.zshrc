@@ -176,4 +176,12 @@ unset __conda_setup
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/brian/.local/bin:$PATH"
+export PATH=/Library/Tex/texbin:$PATH
 [ -f "/Users/brian/.ghcup/env" ] && source "/Users/brian/.ghcup/env" # ghcup-env
+export GRB_LICENSE_FILE=/Users/brian/Documents/Gurobi/gurobi.lic
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--height=40% --preview="cat {}" --preview-window=right:60%:wrap'
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
